@@ -13,3 +13,5 @@ I could also use some help with writing mocha tests for this package.
 #### Background
 After switching to atom, I missed the phpunit integration within the netbeans
 editor. This is an attempt at creating a similar environment.
+
+Copyright (c) 2018 Owen parry <waldermort@gmail.com>
