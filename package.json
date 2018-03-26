@@ -1,9 +1,14 @@
 {
   "name": "php-unit-integrator",
   "main": "./lib/php-unit-integrator",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PHPUnit GUI for atom",
-  "keywords": ["test", "php", "phpunit", "coverage"],
+  "keywords": [
+    "test",
+    "php",
+    "phpunit",
+    "coverage"
+  ],
   "repository": "https://github.com/twifty/atom-phpunit-integrator",
   "license": "MIT",
   "engines": {
