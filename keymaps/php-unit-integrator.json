@@ -1,0 +1,14 @@
+{
+  "atom-workspace": {
+    "ctrl-shift-u": "php-unit-integrator:toggle"
+  },
+  ".platform-darwin .php-unit-integrator .php-unit-output-view": {
+    "cmd-a": "php-unit-integrator:output-select-all"
+  },
+  ".platform-win32 .php-unit-integrator .php-unit-output-view": {
+    "ctrl-a": "php-unit-integrator:output-select-all"
+  },
+  ".platform-linux .php-unit-integrator .php-unit-output-view": {
+    "ctrl-a": "php-unit-integrator:output-select-all"
+  }
+}

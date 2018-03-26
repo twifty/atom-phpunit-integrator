@@ -1,0 +1,37 @@
+{
+  "name": "php-unit-integrator",
+  "main": "./lib/php-unit-integrator",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "repository": "https://github.com/atom/php-unit-integrator",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.24.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "php-integrator.service": {
+      "versions": {
+        "^3.0": "consumeIntegrator"
+      }
+    }
+  },
+  "dependencies": {
+    "etch": "~0.13.0",
+    "shell-escape": "~0.2.0",
+    "xpath": "^0.0.27"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.5.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.3.0",
+    "etch-atom": "0.1.4",
+    "source-map-support": "0.5.4"
+  }
+}

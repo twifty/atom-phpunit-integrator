@@ -1,0 +1,38 @@
+{
+  "context-menu": {
+    ".php-unit-integrator .php-unit-output-view": [
+      {
+        "label": "Select All",
+        "command": "php-unit-integrator:output-select-all"
+      }
+    ],
+    ".php-unit-integrator .php-unit-output-view.has-selection": [
+      {
+        "label": "Copy",
+        "command": "core:copy"
+      }
+    ],
+    ".php-unit-integrator .php-unit-report-view .has-navigation": [
+      {
+        "label": "Go to TestCase",
+        "command": "php-unit-integrator:report-goto-test"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "php-unit-integrator",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "php-unit-integrator:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
