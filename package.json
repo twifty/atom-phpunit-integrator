@@ -2,12 +2,12 @@
   "name": "php-unit-integrator",
   "main": "./lib/php-unit-integrator",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [],
-  "repository": "https://github.com/atom/php-unit-integrator",
+  "description": "PHPUnit GUI for atom",
+  "keywords": ["test", "php", "phpunit", "coverage"],
+  "repository": "https://github.com/twifty/atom-phpunit-integrator",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.24.0 <2.0.0"
+    "atom": ">=1.0.0 <2.0.0"
   },
   "consumedServices": {
     "status-bar": {
@@ -31,7 +31,6 @@
     "eslint": "^4.5.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-react": "^7.3.0",
-    "etch-atom": "0.1.4",
-    "source-map-support": "0.5.4"
+    "etch-atom": "0.1.4"
   }
 }
