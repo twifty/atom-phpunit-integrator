@@ -29,13 +29,14 @@
   "dependencies": {
     "etch": "~0.13.0",
     "shell-escape": "~0.2.0",
-    "xpath": "^0.0.27"
+    "xpath": "^0.0.27",
+    "compare-versions": "^3.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.5.0",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
     "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-react": "^7.7.0",
     "etch-atom": "0.1.4"
   }
 }

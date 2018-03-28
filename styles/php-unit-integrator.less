@@ -15,7 +15,7 @@
 
 .file-link() {
   .file-link {
-    color: @text-color-subtle;
+    color: @text-color;
 
     &:hover {
       color: @text-color-highlight;
@@ -175,7 +175,7 @@ atom-text-editor[data-grammar="text html php"] {
     }
   }
 
-  > .php-unit-input-bar {
+  .php-unit-input-bar {
     display: flex;
     align-items: center;
     font-size: 1em;
@@ -212,46 +212,39 @@ atom-text-editor[data-grammar="text html php"] {
   }
 
   .php-unit-coverage-view {
-    > .php-unit-coverage-row {
-      display: flex;
-      flex-direction: row;
-
-      .file-link();
-
-      &.header {
-        border-bottom: 1px solid @pane-item-border-color;
-        text-align: center;
+    .etch-table-header, .etch-table-body {
+      .covered-file {
+        flex: 3;
       }
+      .covered-percent {
+        flex: 1;
+      }
+      .covered-stats {
+        flex: 1;
+      }
+    }
+    .covered-stats > span {
+      display: flex;
 
-      > .php-unit-coverage-cell {
-        text-overflow: ellipsis;
+      > span {
         white-space: nowrap;
         overflow: hidden;
-        border-right: 1px solid @pane-item-border-color;
-        font-size: @input-font-size;
-
-
-        &.covered-file {
-          flex: 3;
-        }
-        &.covered-percent {
-          flex: 1;
-        }
-        &.covered-stats {
-          flex: 1;
-          display: flex;
-          border-right: none;
-
-          > span:nth-child(1) {
-            text-align: right;
-            flex-grow: 1;
-          }
-          > span:nth-child(3) {
-            text-align: left;
-            flex-grow: 1;
-          }
-        }
+        text-overflow: ellipsis;
       }
+
+      > span:nth-child(1) {
+        padding-right: @component-padding;
+        text-align: right;
+        flex: 1;
+      }
+      > span:nth-child(3) {
+        padding-left: @component-padding;
+        text-align: left;
+        flex: 1;
+      }
+    }
+    .etch-table-row {
+      .file-link();
     }
   }
 }

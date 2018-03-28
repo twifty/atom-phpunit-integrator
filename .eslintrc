@@ -8,6 +8,8 @@
     "react/no-string-refs": "off"
   },
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
