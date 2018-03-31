@@ -3,7 +3,6 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
-@import "./etch.less";
 
 @font-face {
   font-family: FontAwesome;
@@ -178,6 +177,20 @@ atom-text-editor[data-grammar="text html php"] {
       overflow-y: auto;
       position: relative;
 
+      &.is-selecting {
+        .list-item {
+          cursor: pointer;
+        }
+      }
+
+      .list-nested-item {
+        cursor: s-resize;
+
+        &.expanded {
+          cursor: n-resize;
+        }
+      }
+
       &.list-tree li[disabled] {
         display: none;
       }
@@ -187,7 +200,7 @@ atom-text-editor[data-grammar="text html php"] {
       }
 
       .list-item {
-        font-size: 1.1em;
+        user-select: none;
 
         > .error-message {
           background-color: @base-background-color;
