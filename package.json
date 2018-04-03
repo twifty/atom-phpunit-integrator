@@ -1,43 +1,77 @@
 {
-  "name": "php-unit-integrator",
-  "main": "./lib/php-unit-integrator",
-  "version": "0.0.6",
-  "description": "PHPUnit GUI for atom",
-  "keywords": [
-    "test",
-    "php",
-    "phpunit",
-    "coverage"
-  ],
-  "repository": "https://github.com/twifty/atom-phpunit-integrator",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "consumedServices": {
-    "status-bar": {
-      "versions": {
-        "^1.0.0": "consumeStatusBar"
-      }
-    },
-    "php-integrator.service": {
-      "versions": {
-        "^3.0": "consumeIntegrator"
-      }
-    }
-  },
-  "dependencies": {
-    "etch": "~0.13.0",
-    "colletch": "latest",
-    "shell-escape": "~0.2.0",
-    "xpath": "^0.0.27",
-    "compare-versions": "^3.1.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.19.1",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-react": "^7.7.0",
-    "etch-atom": "0.1.4"
-  }
+	"name": "php-unit-integrator",
+	"main": "./lib/php-unit-integrator",
+	"version": "0.0.6",
+	"description": "PHPUnit GUI for atom",
+	"keywords": [
+		"test",
+		"php",
+		"phpunit",
+		"coverage"
+	],
+	"repository": "https://github.com/twifty/atom-phpunit-integrator",
+	"license": "MIT",
+	"engines": {
+		"atom": ">=1.22.0 <2.0.0"
+	},
+	"deserializers": {
+		"PhpUnitIntegratorView": "createIntegratorView"
+	},
+	"consumedServices": {
+		"status-bar": {
+			"versions": {
+				"^1.0.0": "consumeStatusBar"
+			}
+		}
+	},
+	"dependencies": {
+		"etch": "~0.13.0",
+		"colletch": "^0.0.3",
+		"shell-escape": "~0.2.0",
+		"xpath": "^0.0.27",
+		"compare-versions": "^3.1.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^8.2.2",
+		"eslint": "^4.19.1",
+		"eslint-plugin-babel": "^4.1.2",
+		"eslint-plugin-react": "^7.7.0"
+	},
+	"configSchema": {
+		"useIntegratorBase": {
+			"title": "Use PHP Integrator Base Settings",
+			"description": "When installed alongside the PHP Integrator Base package, keep settings in one place.",
+			"type": "boolean",
+			"default": true,
+			"order": 0
+		},
+		"phpCommand": {
+			"title": "PHP command",
+			"description": "The path to your PHP binary (e.g. /usr/bin/php, php, ...).",
+			"type": "string",
+			"default": "php",
+			"order": 1
+		},
+		"phpUnitPath": {
+			"title": "Path to phpunit",
+			"description": "The path to your phpunit binary (e.g. /usr/bin/phpunit, phpunit, ...).",
+			"type": "string",
+			"default": "./vendor/bin/phpunit",
+			"order": 2
+		},
+		"autoOpen": {
+			"title": "Auto Open",
+			"description": "Open panel when opening the editor.",
+			"type": "boolean",
+			"default": false,
+			"order": 3
+		},
+		"gotoTest": {
+			"title": "Auto Navigate",
+			"description": "Navigate to the test class/method when running individual test cases",
+			"type": "boolean",
+			"default": true,
+			"order": 4
+		}
+	}
 }

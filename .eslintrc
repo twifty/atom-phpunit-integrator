@@ -5,7 +5,8 @@
     "strict": 0,
     "no-console": "off",
     "no-fallthrough": "off",
-    "react/no-string-refs": "off"
+    "react/no-string-refs": "off",
+    "react/jsx-key": "off"
   },
   "parserOptions": {
     "ecmaVersion": 6,
