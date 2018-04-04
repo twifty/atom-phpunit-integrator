@@ -1,7 +1,7 @@
 {
 	"name": "php-unit-integrator",
 	"main": "./lib/php-unit-integrator",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "PHPUnit GUI for atom",
 	"keywords": [
 		"test",
