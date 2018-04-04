@@ -29,7 +29,8 @@
 		"colletch": "^0.0.3",
 		"shell-escape": "~0.2.0",
 		"xpath": "^0.0.27",
-		"compare-versions": "^3.1.0"
+		"compare-versions": "^3.1.0",
+		"babel-plugin-transform-async-generator-functions": "^6.24.1"
 	},
 	"devDependencies": {
 		"babel-eslint": "^8.2.2",
