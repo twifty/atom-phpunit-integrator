@@ -72,6 +72,13 @@
 			"type": "boolean",
 			"default": true,
 			"order": 4
+		},
+		"additionalCommandParameters": {
+			"title": "Additional command line parameters",
+			"description": "A space separated list of command line arguments/options for the phpunit binary",
+			"type": "string",
+			"default": "",
+			"order": 5
 		}
 	}
 }
