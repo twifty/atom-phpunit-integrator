@@ -67,6 +67,7 @@ atom-text-editor[data-grammar="text html php"] {
 .php-unit-integrator {
   display: flex;
   flex-direction: column;
+  background: @tab-background-color;
 
   .php-test-passed {
     color: green;
@@ -217,14 +218,81 @@ atom-text-editor[data-grammar="text html php"] {
         }
       }
 
-      .test-state {
-        margin-left: 5px;
+      .test-time {
+        margin-right: @component-padding;
+		float: right;
+		color: @text-color-subtle;
 
-        &.test-passed {
-          color: green;
-        }
+        // &.test-passed {
+        //   color: green;
+        // }
       }
     }
+
+	.php-unit-report-loading {
+		width: 100%;
+		text-align: center;
+		margin: auto;
+
+		> spinner {
+			font-size: 10px;
+			text-indent: -9999em;
+			width: 11em;
+			height: 11em;
+			border-radius: 50%;
+			background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+			position: relative;
+			display: inline-block;
+			animation: load3 1.4s infinite linear;
+			transform: translateZ(0);
+
+			&::before {
+				width: 50%;
+				height: 50%;
+				background: #ffffff;
+				border-radius: 100% 0 0 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+			}
+
+			&::after {
+				background: @tab-background-color;
+				width: 75%;
+				height: 75%;
+				border-radius: 50%;
+				content: '';
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+		}
+  	}
+
+	@-webkit-keyframes load3 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes load3 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
   }
 
   .php-unit-input-bar {
@@ -233,6 +301,7 @@ atom-text-editor[data-grammar="text html php"] {
     font-size: 1em;
     padding: 0 @component-padding;
     border-bottom: 1px solid @pane-item-border-color;
+	margin-top: 5px;
 
     select.form-control {
        color: @text-color;
