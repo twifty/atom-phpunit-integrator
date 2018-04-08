@@ -72,12 +72,13 @@ atom-text-editor[data-grammar="text html php"] {
 
 	.php-unit-pane-header {
 		display: flex;
-		// align-items: center;
 		font-size: 1em;
 		padding: @component-padding;
 		border-bottom: 1px solid @pane-item-border-color;
-		// margin: 5px 0;
 		flex-direction: row;
+		white-space: nowrap;
+		background-color: @tab-background-color;
+		flex: 1 0 auto;
 
 		&.vertical {
 			flex-direction: column;
@@ -90,19 +91,15 @@ atom-text-editor[data-grammar="text html php"] {
 
 		.form-control {
 			color: @text-color;
-			// margin-left: @component-padding;
 			border-color: @button-border-color;
 			background-color: @button-background-color;
 			width: auto;
 			height: auto;
-			// font-size: inherit;
 			padding: 0 @component-padding;
 			display: inline-block;
 
-			&:focus,
-			&:hover {
+			&:focus, &:hover {
 				box-shadow: none;
-				background-color: @button-background-color-hover;
 			}
 		}
 
@@ -110,7 +107,6 @@ atom-text-editor[data-grammar="text html php"] {
 			margin-right: @component-padding;
 
 			> span {
-				vertical-align:cursor: pointer;
 				margin-right: 5px;
 				font-weight: normal;
 				font-size: 0.8em;
