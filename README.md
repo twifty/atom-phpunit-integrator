@@ -11,13 +11,14 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 1. Code Coverage highlighting
 1. Test Suite/Case generation (requires php-integrator)
 1. `phpunit.xml` and `phpunit.xml.dist` aware
-1. Run a full suite or re-run selected test cases
+1. Runs test suites/groups/cases
 1. Quick navigation links to errors
 1. Progressive test output
 1. Vertical / Horizontal layout
 
 ###### Keyboard shortcuts
 
+* `cmd-alt-u` | `ctrl-alt-u`: Toggles the test view
 * `cmd-alt-t` | `ctrl-alt-t`: Runs the currently selected test suite
 * `cmd-alt-f` | `ctrl-alt-f`: Runs the open file
 * `cmd-alt-c` | `ctrl-alt-c`: Runs the test class under the cursor
@@ -29,4 +30,4 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 After switching to atom, I missed the phpunit integration within the netbeans
 editor. This is an attempt at creating a similar environment.
 
-Copyright (c) 2018 Owen parry <waldermort@gmail.com>
+Copyright (c) 2018 Owen Parry <waldermort@gmail.com>
