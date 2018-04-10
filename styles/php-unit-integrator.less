@@ -28,19 +28,21 @@
 		vertical-align: -15%;
 	}
 
-	.fa-cancel-all:before { .fa; content: "\f28e"; font-size: 16px; top: 1px; color: fade(@text-color-error, 65%); }
-	.fa-run-all:before    { .fa; content: "\f04e"; font-size: 16px; top: 1px; }
-	.fa-run-select:before { .fa; content: "\f04b"; font-size: 16px; top: 1px; }
-	.fa-clear-all:before  { .fa; content: "\f1f8"; font-size: 16px; top: 1px; }
+	.fa-cancel-all:before   { .fa; content: "\f28e"; font-size: 16px; top: 1px; color: fade(@text-color-error, 65%); }
+	.fa-run-all:before      { .fa; content: "\f04e"; font-size: 16px; top: 1px; }
+	.fa-run-select:before   { .fa; content: "\f04b"; font-size: 16px; top: 1px; }
+	.fa-clear-all:before    { .fa; content: "\f1f8"; font-size: 16px; top: 1px; }
+	.fa-expand-all:before   { .fa; content: "\f065"; font-size: 16px; top: 1px; }
+	.fa-collapse-all:before { .fa; content: "\f066"; font-size: 16px; top: 1px; }
 
-	.fa-passed:before     { .fa; content: "\f046"; font-size: 16px; top: 1px; color: @text-color-success; }
-	.fa-error:before      { .fa; content: "\f05d"; font-size: 16px; top: 1px; color: @text-color-error; }
-	.fa-warning:before    { .fa; content: "\f071"; font-size: 16px; top: 1px; color: @text-color-warning; }
-	.fa-failure:before    { .fa; content: "\f071"; font-size: 16px; top: 1px; color: @text-color-error; }
-	.fa-skipped:before    { .fa; content: "\f28c"; font-size: 16px; top: 1px; color: @text-color-info; }
+	.fa-passed:before       { .fa; content: "\f046"; font-size: 16px; top: 1px; color: @text-color-success; }
+	.fa-error:before        { .fa; content: "\f05d"; font-size: 16px; top: 1px; color: @text-color-error; }
+	.fa-warning:before      { .fa; content: "\f071"; font-size: 16px; top: 1px; color: @text-color-warning; }
+	.fa-failure:before      { .fa; content: "\f071"; font-size: 16px; top: 1px; color: @text-color-error; }
+	.fa-skipped:before      { .fa; content: "\f28c"; font-size: 16px; top: 1px; color: @text-color-info; }
 
-	.fa-terminal:before   { .fa; content: "\f120"; font-size: 16px; top: 1px; }
-	.fa-coverage:before   { .fa; content: "\f0ae"; font-size: 16px; top: 1px; }
+	.fa-terminal:before     { .fa; content: "\f120"; font-size: 16px; top: 1px; }
+	.fa-coverage:before     { .fa; content: "\f0ae"; font-size: 16px; top: 1px; }
 }
 
 .file-link() {
@@ -83,9 +85,13 @@ atom-text-editor[data-grammar="text html php"] {
 		&.vertical {
 			flex-direction: column;
 
-			label > span {
-				min-width: 8em;
-				display: inline-block;
+			label {
+				margin-bottom: 4px;
+
+				> span {
+					min-width: 8em;
+					display: inline-block;
+				}
 			}
 		}
 
@@ -105,6 +111,7 @@ atom-text-editor[data-grammar="text html php"] {
 
 		label {
 			margin-right: @component-padding;
+			margin-bottom: 0;
 
 			> span {
 				margin-right: 5px;
@@ -121,7 +128,7 @@ atom-text-editor[data-grammar="text html php"] {
 		background: @tab-background-color;
 
 		> * {
-			padding: 0 4px;
+			// padding: 0 4px;
 			overflow: hidden;
 		}
 	}
@@ -199,8 +206,9 @@ atom-text-editor[data-grammar="text html php"] {
 
 	.php-unit-report-view {
 		display: flex;
-		overflow: hidden;
+		overflow: auto;
 		height: 100%;
+		padding: 4px;
 
 		> .php-unit-report-tree {
 			flex-grow: 1;
@@ -381,6 +389,36 @@ atom-text-editor[data-grammar="text html php"] {
 
 		.etch-table-row {
 			.file-link();
+		}
+	}
+
+	.php-unit-report-panel {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		.php-unit-statistics {
+			background-color: @overlay-background-color;
+			border-top: 1px solid @overlay-border-color;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			&:empty {
+				display: none;
+			}
+
+			.stats-item {
+				line-height: 2em;
+
+				.stats-label {
+					padding-left: 5px;
+				}
+
+				.stats-value {
+					padding-left: 5px;
+				}
+			}
 		}
 	}
 }

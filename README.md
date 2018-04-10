@@ -15,6 +15,7 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 1. Quick navigation links to errors
 1. Progressive test output
 1. Vertical / Horizontal layout
+1. Tree View integration
 
 ###### Keyboard shortcuts
 
