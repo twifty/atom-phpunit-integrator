@@ -26,7 +26,7 @@
 	},
 	"dependencies": {
 		"etch": "~0.13.0",
-		"colletch": "^0.0.8",
+		"colletch": "^0.0.9",
 		"shell-escape": "~0.2.0",
 		"xpath": "^0.0.27",
 		"compare-versions": "^3.1.0"
@@ -59,26 +59,40 @@
 			"default": "./vendor/bin/phpunit",
 			"order": 2
 		},
-		"autoOpen": {
-			"title": "Auto Open",
+		"additionalCommandParameters": {
+			"title": "Additional command line parameters",
+			"description": "A space separated list of command line arguments/options for the phpunit binary",
+			"type": "string",
+			"default": "",
+			"order": 3
+		},
+		"alwaysOpen": {
+			"title": "Always Open",
 			"description": "Open panel when opening the editor.",
 			"type": "boolean",
 			"default": false,
-			"order": 3
+			"order": 4
 		},
 		"gotoTest": {
 			"title": "Auto Navigate",
 			"description": "Navigate to the test class/method when running individual test cases",
 			"type": "boolean",
 			"default": true,
-			"order": 4
-		},
-		"additionalCommandParameters": {
-			"title": "Additional command line parameters",
-			"description": "A space separated list of command line arguments/options for the phpunit binary",
-			"type": "string",
-			"default": "",
 			"order": 5
+		},
+		"openView": {
+			"title": "Auto Open",
+			"description": "Open the panel when running test using keyboard shortcuts",
+			"type": "boolean",
+			"default": true,
+			"order": 6
+		},
+		"enableTreeView": {
+			"title": "Tree View Integration",
+			"description": "Show code coverage in atoms tree view",
+			"type": "boolean",
+			"default": true,
+			"order": 7
 		}
 	}
 }
