@@ -39,7 +39,7 @@
 	.fa-error:before        { .fa; content: "\f05d"; font-size: 16px; top: 1px; color: @text-color-error; }
 	.fa-warning:before      { .fa; content: "\f071"; font-size: 16px; top: 1px; color: @text-color-warning; }
 	.fa-failure:before      { .fa; content: "\f071"; font-size: 16px; top: 1px; color: @text-color-error; }
-	.fa-skipped:before      { .fa; content: "\f28c"; font-size: 16px; top: 1px; color: @text-color-info; }
+	.fa-skipped:before      { .fa; content: "\f28c"; font-size: 16px; top: 1px; left: -1px; color: @text-color-info; }
 
 	.fa-terminal:before     { .fa; content: "\f120"; font-size: 16px; top: 1px; }
 	.fa-coverage:before     { .fa; content: "\f0ae"; font-size: 16px; top: 1px; }
@@ -350,8 +350,15 @@ atom-text-editor[data-grammar="text html php"] {
 	}
 
 	.php-unit-coverage-view {
-		.etch-table-body,
-		.etch-table-header {
+		height: 100%;
+		overflow: hidden;
+
+		.etch-table-body {
+			height: 100%;
+			overflow-y: auto;
+		}
+
+		.etch-table-body, .etch-table-header {
 			.covered-file {
 				flex: 3;
 			}
@@ -403,6 +410,7 @@ atom-text-editor[data-grammar="text html php"] {
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
+			flex: 1 0 auto;
 
 			&:empty {
 				display: none;
