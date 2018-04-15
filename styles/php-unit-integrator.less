@@ -242,8 +242,18 @@ atom-text-editor[data-grammar="text html php"] {
 				background-color: @background-color-highlight;
 			}
 
+			&.list-tree.has-collapsable-children .list-nested-item > .list-item {
+				width: calc(~'100% - 17px');
+			}
+
 			.list-item {
 				user-select: none;
+
+				> span:first-child {
+					display: inline-flex;
+					width: 100%;
+					flex-direction: row;
+				}
 
 				> .error-message {
 					background-color: @base-background-color;
@@ -264,9 +274,14 @@ atom-text-editor[data-grammar="text html php"] {
 			}
 
 			.test-result {
+				display: inline-flex;
+				width: 100%;
+				overflow: hidden;
+
 				.test-name {
-					display: inline-flex;
-					max-width: calc(~"100% - 10em");
+					flex: 1 1 auto;
+					overflow: hidden;
+
 					> div {
 						text-overflow: ellipsis;
 						overflow: hidden;
@@ -275,8 +290,8 @@ atom-text-editor[data-grammar="text html php"] {
 				}
 
 				.test-time {
+					flex: 0 0 auto;
 					margin-right: @component-padding;
-					float: right;
 					color: @text-color-subtle;
 				}
 			}
