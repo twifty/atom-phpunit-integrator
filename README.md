@@ -27,6 +27,40 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 * `cmd-alt-g` | `ctrl-alt-g`: Runs all files in the test directory
 * `cmd-alt-v` | `ctrl-alt-v`: Runs the test method under the cursor
 
+###### Usage
+All testable projects are required to have either a `phpunit.xml` or `phpunit.xml.dist`
+file in the project root.
+
+The default installation presumes you have 'src' and 'tests' directories in the
+root of your project. It also presumes you use the 'Test' namespace segment for
+all classes within the 'tests' directory.
+
+For example, a source class located at:  
+`/var/www/project/src/Entity/User.php` under the namespace `\Vendor\Project\Entity`  
+will be mapped to a test class located at:  
+`/var/www/project/tests/Entity/UserTest.php` under the namespace `\Vendor\Project\Test\Entity`
+
+This default behaviour can be modified by placing a `phpunit.js` (or `phpunit.coffee`)
+file in any directory between the source file and the project root. This file can
+contain any valid `nodejs` code, but it must export a single object which contains
+the redefined methods of [PhpUnitDefaultAdapter](lib/proxy/php-unit-default-adapter.js).
+
+So, for example, to change the default test directory from `tests` to `spec` include
+the following in the file:
+```js
+module.exports = {
+	getTargetDirectory() {
+		return 'spec';
+	}
+}
+```
+All methods declared in this file will replace the original methods in a new instance.
+So, it is safe to call other methods using `this` or even store properties in the
+instance.
+
+The first adapter found, searching from the source towards the root, will be used.
+This allows for a per-directory configuration.
+
 ###### Background
 After switching to atom, I missed the phpunit integration within the netbeans
 editor. This is an attempt at creating a similar environment.
