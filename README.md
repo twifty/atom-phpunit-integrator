@@ -27,6 +27,10 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 * `cmd-alt-g` | `ctrl-alt-g`: Runs all files in the test directory
 * `cmd-alt-v` | `ctrl-alt-v`: Runs the test method under the cursor
 
+In addition to keyboard shortcuts, it is also possible to run tests and navigate
+to test files by right-clicking within a class or method body and selecting
+the appropriate entry in the context menu.
+
 ###### Usage
 All testable projects are required to have either a `phpunit.xml` or `phpunit.xml.dist`
 file in the project root.
