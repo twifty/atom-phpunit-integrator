@@ -93,6 +93,13 @@
 			"type": "boolean",
 			"default": true,
 			"order": 7
+		},
+		"errorLines": {
+			"title": "Display Error Lines",
+			"description": "The number of error output lines to display in the tree panel (0 for all lines)",
+			"type": "number",
+			"default": 10,
+			"order": 8
 		}
 	}
 }
