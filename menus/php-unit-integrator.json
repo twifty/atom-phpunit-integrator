@@ -11,12 +11,6 @@
         "label": "Copy",
         "command": "core:copy"
       }
-    ],
-    ".php-unit-integrator .php-unit-report-view .has-navigation": [
-      {
-        "label": "Go to TestCase",
-        "command": "php-unit-integrator:report-goto-test"
-      }
     ]
   },
   "menu": [
