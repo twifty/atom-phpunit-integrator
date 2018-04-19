@@ -218,32 +218,6 @@ atom-text-editor[data-grammar="text html php"] {
 			overflow-x: hidden;
 			position: relative;
 
-			&.is-selecting {
-				.list-item {
-					cursor: pointer;
-				}
-			}
-
-			.list-nested-item {
-				cursor: s-resize;
-
-				&.expanded {
-					cursor: n-resize;
-				}
-			}
-
-			&.list-tree li[disabled] {
-				display: none;
-			}
-
-			.selected:before {
-				height: 2.2em;
-			}
-
-			.list-item.selected::before, .list-nested-item.selected::before {
-				background-color: @background-color-highlight;
-			}
-
 			&.list-tree.has-collapsable-children .list-nested-item > .list-item {
 				width: calc(~'100% - 17px');
 			}
@@ -343,6 +317,7 @@ atom-text-editor[data-grammar="text html php"] {
 				}
 			}
 		}
+
 		@-webkit-keyframes load3 {
 			0% {
 				-webkit-transform: rotate(0deg);
@@ -354,6 +329,7 @@ atom-text-editor[data-grammar="text html php"] {
 				transform: rotate(360deg);
 			}
 		}
+
 		@keyframes load3 {
 			0% {
 				-webkit-transform: rotate(0deg);
@@ -425,6 +401,7 @@ atom-text-editor[data-grammar="text html php"] {
 		.php-unit-statistics {
 			background-color: @overlay-background-color;
 			border-top: 1px solid @overlay-border-color;
+			font-weight: bold;
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
@@ -444,6 +421,16 @@ atom-text-editor[data-grammar="text html php"] {
 				.stats-value {
 					padding-left: 5px;
 				}
+			}
+
+			&.error, &.failure {
+				background-color: fade(@background-color-error, 50%);
+			}
+			&.warning {
+				background-color: fade(@background-color-warning, 50%);
+			}
+			&.passed {
+				background-color: fade(@background-color-success, 50%);
 			}
 		}
 
