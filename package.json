@@ -9,7 +9,7 @@
 		"phpunit",
 		"coverage"
 	],
-	"repository": "https://github.com/twifty/atom-phpunit-integrator",
+	"repository": "git@github.com:twifty/atom-phpunit-integrator.git",
 	"license": "MIT",
 	"engines": {
 		"atom": ">=1.22.0 <2.0.0"
