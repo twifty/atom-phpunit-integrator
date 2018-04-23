@@ -3,117 +3,117 @@
 @import "ui-variables";
 
 .icon {
-	&.php-test-passed     { color: @text-color-success; }
-	&.php-test-error      { color: @text-color-error; }
-	&.php-test-warning    { color: @text-color-warning; }
-	&.php-test-failure    { color: @text-color-error; }
-	&.php-test-skipped    { color: @text-color-info; }
-	&.icon-playback-pause { color: fade(@text-color-error, 65%); }
+    &.php-test-passed     { color: @text-color-success; }
+    &.php-test-error      { color: @text-color-error; }
+    &.php-test-warning    { color: @text-color-warning; }
+    &.php-test-failure    { color: @text-color-error; }
+    &.php-test-skipped    { color: @text-color-info; }
+    &.icon-playback-pause { color: fade(@text-color-error, 65%); }
 }
 
 .file-link() {
-	.file-link {
-		color: @text-color;
+    .file-link {
+        color: @text-color;
 
-		&:hover {
-			color: @text-color-highlight;
-			cursor: pointer;
-		}
-	}
+        &:hover {
+            color: @text-color-highlight;
+            cursor: pointer;
+        }
+    }
 }
 
 atom-text-editor[data-grammar="text html php"] {
-	.highlight.uncovered .region {
-		background-color: @background-color-error;
-		opacity: 0.2;
-	}
+    .highlight.uncovered .region {
+        background-color: @background-color-error;
+        opacity: 0.2;
+    }
 
-	.highlight.covered .region {
-		background-color: @background-color-success;
-		opacity: 0.2;
-	}
+    .highlight.covered .region {
+        background-color: @background-color-success;
+        opacity: 0.2;
+    }
 }
 
 .php-unit-integrator {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	.php-unit-pane-header {
-		display: flex;
-		font-size: 1em;
-		padding: @component-padding;
-		border-bottom: 1px solid @pane-item-border-color;
-		flex-direction: row;
-		white-space: nowrap;
-		background-color: @tab-background-color;
-		flex: 1 0 auto;
+    .php-unit-pane-header {
+        display: flex;
+        font-size: 1em;
+        padding: @component-padding;
+        border-bottom: 1px solid @pane-item-border-color;
+        flex-direction: row;
+        white-space: nowrap;
+        background-color: @tab-background-color;
+        flex: 1 0 auto;
 
-		&.vertical {
-			flex-direction: column;
+        &.vertical {
+            flex-direction: column;
 
-			label {
-				margin-bottom: 4px;
+            label {
+                margin-bottom: 4px;
 
-				> span {
-					min-width: 8em;
-					display: inline-block;
-				}
-			}
-		}
+                > span {
+                    min-width: 8em;
+                    display: inline-block;
+                }
+            }
+        }
 
-		.form-control {
-			color: @text-color;
-			border-color: @button-border-color;
-			background-color: @button-background-color;
-			width: auto;
-			height: auto;
-			padding: 0 @component-padding;
-			display: inline-block;
+        .form-control {
+            color: @text-color;
+            border-color: @button-border-color;
+            background-color: @button-background-color;
+            width: auto;
+            height: auto;
+            padding: 0 @component-padding;
+            display: inline-block;
 
-			&:focus, &:hover {
-				box-shadow: none;
-			}
-		}
+            &:focus, &:hover {
+                box-shadow: none;
+            }
+        }
 
-		label {
-			margin-right: @component-padding;
-			margin-bottom: 0;
+        label {
+            margin-right: @component-padding;
+            margin-bottom: 0;
 
-			> span {
-				margin-right: 5px;
-				font-weight: normal;
-				font-size: 0.8em;
-			}
-		}
-	}
+            > span {
+                margin-right: 5px;
+                font-weight: normal;
+                font-size: 0.8em;
+            }
+        }
+    }
 
-	.php-unit-pane-content {
-		display: flex;
-		flex-direction: row;
-		height: 100%;
-		background: @tab-background-color;
+    .php-unit-pane-content {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        background: @tab-background-color;
 
-		> * {
-			overflow: hidden;
-		}
-	}
+        > * {
+            overflow: hidden;
+        }
+    }
 
-	.php-unit-button-bar {
-		list-style-type: none;
-		margin: 0;
-		padding: 4px;
-		font-size: 12px;
-		text-align: center;
-		border-right: 1px solid @pane-item-border-color;
-		overflow-y: auto;
-		flex-shrink: 0;
+    .php-unit-button-bar {
+        list-style-type: none;
+        margin: 0;
+        padding: 4px;
+        font-size: 12px;
+        text-align: center;
+        border-right: 1px solid @pane-item-border-color;
+        overflow-y: auto;
+        flex-shrink: 0;
 
-		button {
+        button {
             width: 3em;
-            
-			&.active {
-				background-color: lighten(@button-background-color, 10%);
-			}
+
+            &.active {
+                background-color: lighten(@button-background-color, 10%);
+            }
 
             &:focus {
                 outline: inherit;
@@ -121,313 +121,313 @@ atom-text-editor[data-grammar="text html php"] {
                 box-shadow: inherit;
                 outline-offset: inherit;
             }
-		}
+        }
 
-		divider {
-			display: block;
-			border: 1px dotted black;
-			margin: 6px 0;
-		}
-	}
+        divider {
+            display: block;
+            border: 1px dotted black;
+            margin: 6px 0;
+        }
+    }
 
-	&.php-unit-skelgen {
-		text-align: center;
-		font-size: 1.5em;
+    &.php-unit-skelgen {
+        text-align: center;
+        font-size: 1.5em;
 
-		> span {
-			padding-bottom: @component-padding;
+        > span {
+            padding-bottom: @component-padding;
 
-			&:nth-child(2) {
-				color: @text-color-info;
-			}
-		}
+            &:nth-child(2) {
+                color: @text-color-info;
+            }
+        }
 
-		> div {
-			display: flex;
-			justify-content: space-around;
-			padding-top: @component-padding;
+        > div {
+            display: flex;
+            justify-content: space-around;
+            padding-top: @component-padding;
 
-			> button {
-				width: 100px;
-			}
-		}
-	}
+            > button {
+                width: 100px;
+            }
+        }
+    }
 
-	.php-unit-output-view {
-		.file-link()
-	}
+    .php-unit-output-view {
+        .file-link()
+    }
 
-	.php-unit-report-view {
-		display: flex;
-		overflow: auto;
-		height: 100%;
-		padding: 4px;
-		flex-direction: column;
+    .php-unit-report-view {
+        display: flex;
+        overflow: auto;
+        height: 100%;
+        padding: 4px;
+        flex-direction: column;
 
-		> .php-unit-report-header {
-			display: flex;
-			flex-direction: row;
-			flex: 0 0 1.7em;
-			align-items: center;
-			background-color: @inset-panel-background-color;
-			border-bottom: 1px solid @inset-panel-border-color;
+        > .php-unit-report-header {
+            display: flex;
+            flex-direction: row;
+            flex: 0 0 1.7em;
+            align-items: center;
+            background-color: @inset-panel-background-color;
+            border-bottom: 1px solid @inset-panel-border-color;
 
-			.sort {
-				padding-right: 10px;
-				padding-left: 5px;
-				position: relative;
+            .sort {
+                padding-right: 10px;
+                padding-left: 5px;
+                position: relative;
 
-				&:hover {
-					cursor: pointer;
-				}
-			}
+                &:hover {
+                    cursor: pointer;
+                }
+            }
 
-			.sort:after, .sort:before {
-				content: "";
-				border: 4px solid transparent;
-				display: block;
-				height: 0;
-				right: 5px;
-				top: 50%;
-				position: absolute;
-				width: 0;
-			}
+            .sort:after, .sort:before {
+                content: "";
+                border: 4px solid transparent;
+                display: block;
+                height: 0;
+                right: 5px;
+                top: 50%;
+                position: absolute;
+                width: 0;
+            }
 
-			.sort:before {
-				border-bottom-color: @text-color;
-				margin-top: -9px;
-			}
+            .sort:before {
+                border-bottom-color: @text-color;
+                margin-top: -9px;
+            }
 
-			.sort:after {
-				border-top-color: @text-color;
-				margin-top: 1px;
-			}
+            .sort:after {
+                border-top-color: @text-color;
+                margin-top: 1px;
+            }
 
-			> .sort-state {
-				width: 5em;
-				border-right: 1px solid @inset-panel-border-color;
-			}
+            > .sort-state {
+                width: 5em;
+                border-right: 1px solid @inset-panel-border-color;
+            }
 
-			> .sort-name {
-				flex-grow: 1;
-				border-right: 1px solid @inset-panel-border-color;
-			}
+            > .sort-name {
+                flex-grow: 1;
+                border-right: 1px solid @inset-panel-border-color;
+            }
 
-			> .sort-time {
-				width: 6em;
-			}
-		}
+            > .sort-time {
+                width: 6em;
+            }
+        }
 
-		> .php-unit-report-tree {
-			flex-grow: 1;
-			overflow-y: auto;
-			overflow-x: hidden;
-			position: relative;
+        > .php-unit-report-tree {
+            flex-grow: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
 
-			&.list-tree.has-collapsable-children .list-nested-item > .list-item {
-				width: calc(~'100% - 17px');
-			}
+            &.list-tree.has-collapsable-children .list-nested-item > .list-item {
+                width: calc(~'100% - 17px');
+            }
 
-			.list-item {
-				user-select: none;
+            .list-item {
+                user-select: none;
 
-				> span:first-child {
-					display: inline-flex;
-					width: 100%;
-					flex-direction: row;
-					align-items: center;
-				}
+                > span:first-child {
+                    display: inline-flex;
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                }
 
-				> .error-message {
-					background-color: @base-background-color;
-					white-space: pre-wrap;
-					line-height: 1em;
-					user-select: text;
+                > .error-message {
+                    background-color: @base-background-color;
+                    white-space: pre-wrap;
+                    line-height: 1em;
+                    user-select: text;
 
-					span {
-						display: block;
-						padding: 5px;
-					}
+                    span {
+                        display: block;
+                        padding: 5px;
+                    }
 
-					 .file-link();
-				}
+                     .file-link();
+                }
 
-				&:hover .test-time {
-					color: @text-color-info;
-				}
-			}
+                &:hover .test-time {
+                    color: @text-color-info;
+                }
+            }
 
-			.test-result {
-				display: inline-flex;
-				width: 100%;
-				overflow: hidden;
-				line-height: normal;
+            .test-result {
+                display: inline-flex;
+                width: 100%;
+                overflow: hidden;
+                line-height: normal;
 
-				.test-name {
-					flex: 1 1 auto;
-					overflow: hidden;
+                .test-name {
+                    flex: 1 1 auto;
+                    overflow: hidden;
 
-					> div {
-						text-overflow: ellipsis;
-						overflow: hidden;
-						white-space: nowrap;
-					}
-				}
+                    > div {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
 
-				.test-time {
-					flex: 0 0 auto;
-					margin-right: @component-padding;
-					color: @text-color-subtle;
-				}
-			}
-		}
+                .test-time {
+                    flex: 0 0 auto;
+                    margin-right: @component-padding;
+                    color: @text-color-subtle;
+                }
+            }
+        }
 
-		.php-unit-report-loading {
-			text-align: center;
-			margin: auto;
-			display: flex;
-			align-items: center;
-			height: 100%;
-		}
-	}
+        .php-unit-report-loading {
+            text-align: center;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
 
-	.php-unit-coverage-view {
-		height: 100%;
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
+    .php-unit-coverage-view {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
 
-		> .etch-table {
-			flex: 1 0 0%;
+        > .etch-table {
+            flex: 1 0 0%;
 
-			.etch-table-body, .etch-table-header {
-				.covered-file {
-					flex: 3;
-				}
+            .etch-table-body, .etch-table-header {
+                .covered-file {
+                    flex: 3;
+                }
 
-				.covered-percent {
-					flex: 1;
-				}
+                .covered-percent {
+                    flex: 1;
+                }
 
-				.covered-stats {
-					flex: 1;
-				}
-			}
+                .covered-stats {
+                    flex: 1;
+                }
+            }
 
-			.covered-stats > span {
-				display: flex;
+            .covered-stats > span {
+                display: flex;
 
-				> span {
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-				}
+                > span {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
 
-				> span:nth-child(1) {
-					padding-right: @component-padding;
-					text-align: right;
-					flex: 1;
-				}
+                > span:nth-child(1) {
+                    padding-right: @component-padding;
+                    text-align: right;
+                    flex: 1;
+                }
 
-				> span:nth-child(3) {
-					padding-left: @component-padding;
-					text-align: left;
-					flex: 1;
-				}
-			}
+                > span:nth-child(3) {
+                    padding-left: @component-padding;
+                    text-align: left;
+                    flex: 1;
+                }
+            }
 
-			.etch-table-body > .etch-table-row {
-				.file-link();
+            .etch-table-body > .etch-table-row {
+                .file-link();
 
-				.etch-progress-bar {
-					height: 90%;
-				}
-			}
-		}
+                .etch-progress-bar {
+                    height: 90%;
+                }
+            }
+        }
 
-		> .etch-progress-bar {
-			flex: 0 0 17px;
+        > .etch-progress-bar {
+            flex: 0 0 17px;
 
-			&.empty {
-				display: none;
-			}
-		}
-	}
+            &.empty {
+                display: none;
+            }
+        }
+    }
 
-	.php-unit-report-panel {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
+    .php-unit-report-panel {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
 
-		.php-unit-statistics {
-			background-color: @overlay-background-color;
-			border-top: 1px solid @overlay-border-color;
-			font-weight: bold;
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			flex: 1 0 auto;
+        .php-unit-statistics {
+            background-color: @overlay-background-color;
+            border-top: 1px solid @overlay-border-color;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex: 1 0 auto;
 
-			&:empty {
-				display: none;
-			}
+            &:empty {
+                display: none;
+            }
 
-			.stats-item {
-				line-height: 2em;
+            .stats-item {
+                line-height: 2em;
 
-				.stats-label {
-					padding-left: 5px;
-				}
+                .stats-label {
+                    padding-left: 5px;
+                }
 
-				.stats-value {
-					padding-left: 5px;
-				}
-			}
+                .stats-value {
+                    padding-left: 5px;
+                }
+            }
 
-			&.error, &.failure {
-				background-color: fade(@background-color-error, 50%);
-			}
-			&.warning {
-				background-color: fade(@background-color-warning, 50%);
-			}
-			&.passed {
-				background-color: fade(@background-color-success, 50%);
-			}
-		}
+            &.error, &.failure {
+                background-color: fade(@background-color-error, 50%);
+            }
+            &.warning {
+                background-color: fade(@background-color-warning, 50%);
+            }
+            &.passed {
+                background-color: fade(@background-color-success, 50%);
+            }
+        }
 
-		.php-unit-batch-progress {
-			height: 17px;
+        .php-unit-batch-progress {
+            height: 17px;
 
-			&[data-total='0'] {
-				display: none;
-			}
-		}
-	}
+            &[data-total='0'] {
+                display: none;
+            }
+        }
+    }
 }
 
 .php-unit-status-bar {
-	display: inline-block;
-	color: @text-color-subtle;
-	border: 1px solid @button-border-color;
-	background: fade(@button-background-color, 33%);
-	cursor: pointer;
-	vertical-align: middle;
-	position: relative;
-	padding: 0 0.6em;
-	line-height: 1.8em;
-	margin-right: 0.6em;
+    display: inline-block;
+    color: @text-color-subtle;
+    border: 1px solid @button-border-color;
+    background: fade(@button-background-color, 33%);
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    padding: 0 0.6em;
+    line-height: 1.8em;
+    margin-right: 0.6em;
 
-	&:active {
-		background: transparent;
-	}
+    &:active {
+        background: transparent;
+    }
 
-	&.active {
-		color: @text-color-highlight;
-		background: @button-background-color;
-	}
+    &.active {
+        color: @text-color-highlight;
+        background: @button-background-color;
+    }
 }
 
 .tree-view .coverage {
-	color: @text-color-info;
-	padding-left: 0.3em;
+    color: @text-color-info;
+    padding-left: 0.3em;
 }
