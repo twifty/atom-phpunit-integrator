@@ -9,7 +9,7 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 ###### Features:
 1. Point and click interface
 1. Code Coverage highlighting
-1. Test Suite/Case generation (requires php-integrator)
+1. Test Suite/Case generation
 1. `phpunit.xml` and `phpunit.xml.dist` aware
 1. Runs test suites/groups/cases
 1. Quick navigation links to errors
