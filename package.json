@@ -1,113 +1,113 @@
 {
-	"name": "php-unit-integrator",
-	"main": "./lib/main",
-	"version": "0.0.39",
-	"description": "PHPUnit GUI for atom",
-	"keywords": [
-		"test",
-		"php",
-		"phpunit",
-		"coverage"
-	],
-	"repository": "git@github.com:twifty/atom-phpunit-integrator.git",
-	"license": "MIT",
-	"engines": {
-		"atom": ">=1.22.0 <2.0.0"
-	},
-	"deserializers": {
-		"PhpUnitIntegratorView": "createIntegratorView"
-	},
-	"consumedServices": {
-		"status-bar": {
-			"versions": {
-				"^1.0.0": "consumeStatusBar"
-			}
-		}
-	},
-	"dependencies": {
-		"etch": "~0.13.0",
-		"colletch": "^0.0.24",
-		"shell-escape": "~0.2.0",
-		"xpath": "^0.0.27",
-		"util.promisify": "^1.0.0",
-        "php-parser": "3.0.0-alpha2"
-	},
-	"devDependencies": {
-		"babel-eslint": "^8.2.2",
-		"eslint": "^4.19.1",
-		"eslint-plugin-babel": "^4.1.2",
-		"eslint-plugin-react": "^7.7.0"
-	},
-	"configSchema": {
-		"useIntegratorBase": {
-			"title": "Use PHP Integrator Base Settings",
-			"description": "When installed alongside the PHP Integrator Base package, keep settings in one place.",
-			"type": "boolean",
-			"default": true,
-			"order": 0
-		},
-		"phpCommand": {
-			"title": "PHP command",
-			"description": "The path to your PHP binary (e.g. /usr/bin/php, php, ...).",
-			"type": "string",
-			"default": "php",
-			"order": 1
-		},
-        "phpExtensions": {
-            "title": "Path to XDebug extension",
-            "description": "The full path to xdebug.so or xdebug.dll will enable it to be toggled.",
-            "type": "string",
-            "default": "",
-            "order": 2
-        },
-		"phpUnitPath": {
-			"title": "Path to phpunit",
-			"description": "The path to your phpunit binary (e.g. /usr/bin/phpunit, phpunit, ...).",
-			"type": "string",
-			"default": "./vendor/bin/phpunit",
-			"order": 3
-		},
-		"additionalCommandParameters": {
-			"title": "Additional command line parameters",
-			"description": "A space separated list of command line arguments/options for the phpunit binary.",
-			"type": "string",
-			"default": "",
-			"order": 4
-		},
-		"alwaysOpen": {
-			"title": "Always Open",
-			"description": "Open panel when opening the editor.",
-			"type": "boolean",
-			"default": false,
-			"order": 5
-		},
-		"gotoTest": {
-			"title": "Auto Navigate",
-			"description": "Navigate to the test class/method when running individual test cases.",
-			"type": "boolean",
-			"default": true,
-			"order": 6
-		},
-		"openView": {
-			"title": "Auto Open",
-			"description": "Open the panel when running test using keyboard shortcuts.",
-			"type": "boolean",
-			"default": true,
-			"order": 7
-		},
-		"enableTreeView": {
-			"title": "Tree View Integration",
-			"description": "Show code coverage in atoms tree view.",
-			"type": "boolean",
-			"default": true,
-			"order": 8
-		},
-		"errorLines": {
-			"title": "Display Error Lines",
-			"description": "The number of error output lines to display in the tree panel (0 for all lines).",
-			"type": "number",
-			"default": 10,
-			"order": 9
-		}
-	}
+  "name": "php-unit-integrator",
+  "main": "./lib/main",
+  "version": "0.0.40",
+  "description": "PHPUnit GUI for atom",
+  "keywords": [
+    "test",
+    "php",
+    "phpunit",
+    "coverage"
+  ],
+  "repository": "git@github.com:twifty/atom-phpunit-integrator.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.22.0 <2.0.0"
+  },
+  "deserializers": {
+    "PhpUnitIntegratorView": "createIntegratorView"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "dependencies": {
+    "etch": "~0.13.0",
+    "colletch": "^0.0.24",
+    "shell-escape": "~0.2.0",
+    "xpath": "^0.0.27",
+    "util.promisify": "^1.0.0",
+    "php-parser": "3.0.0-alpha2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "configSchema": {
+    "useIntegratorBase": {
+      "title": "Use PHP Integrator Base Settings",
+      "description": "When installed alongside the PHP Integrator Base package, keep settings in one place.",
+      "type": "boolean",
+      "default": true,
+      "order": 0
+    },
+    "phpCommand": {
+      "title": "PHP command",
+      "description": "The path to your PHP binary (e.g. /usr/bin/php, php, ...).",
+      "type": "string",
+      "default": "php",
+      "order": 1
+    },
+    "phpExtensions": {
+      "title": "Path to XDebug extension",
+      "description": "The full path to xdebug.so or xdebug.dll will enable it to be toggled.",
+      "type": "string",
+      "default": "",
+      "order": 2
+    },
+    "phpUnitPath": {
+      "title": "Path to phpunit",
+      "description": "The path to your phpunit binary (e.g. /usr/bin/phpunit, phpunit, ...).",
+      "type": "string",
+      "default": "./vendor/bin/phpunit",
+      "order": 3
+    },
+    "additionalCommandParameters": {
+      "title": "Additional command line parameters",
+      "description": "A space separated list of command line arguments/options for the phpunit binary.",
+      "type": "string",
+      "default": "",
+      "order": 4
+    },
+    "alwaysOpen": {
+      "title": "Always Open",
+      "description": "Open panel when opening the editor.",
+      "type": "boolean",
+      "default": false,
+      "order": 5
+    },
+    "gotoTest": {
+      "title": "Auto Navigate",
+      "description": "Navigate to the test class/method when running individual test cases.",
+      "type": "boolean",
+      "default": true,
+      "order": 6
+    },
+    "openView": {
+      "title": "Auto Open",
+      "description": "Open the panel when running test using keyboard shortcuts.",
+      "type": "boolean",
+      "default": true,
+      "order": 7
+    },
+    "enableTreeView": {
+      "title": "Tree View Integration",
+      "description": "Show code coverage in atoms tree view.",
+      "type": "boolean",
+      "default": true,
+      "order": 8
+    },
+    "errorLines": {
+      "title": "Display Error Lines",
+      "description": "The number of error output lines to display in the tree panel (0 for all lines).",
+      "type": "number",
+      "default": 10,
+      "order": 9
+    }
+  }
 }
