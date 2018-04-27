@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "etch": "~0.13.0",
-    "colletch": "^0.0.24",
+    "colletch": "^0.0.25",
     "shell-escape": "~0.2.0",
     "xpath": "^0.0.27",
     "util.promisify": "^1.0.0",
