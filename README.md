@@ -26,6 +26,8 @@ This is in beta mode at the moment. I would appreciate any testers and feedback.
 * `cmd-alt-y` | `ctrl-alt-y`: Runs all test suites in the `phpunit.xml` file
 * `cmd-alt-g` | `ctrl-alt-g`: Runs all files in the test directory
 * `cmd-alt-v` | `ctrl-alt-v`: Runs the test method under the cursor
+* `cmd-alt-k` | `ctrl-alt-k`: Goto the test class under the cursor
+* `cmd-alt-m` | `ctrl-alt-m`: Goto the test method under the cursor
 
 In addition to keyboard shortcuts, it is also possible to run tests and navigate
 to test files by right-clicking within a class or method body and selecting

@@ -18,7 +18,10 @@
 
         "cmd-alt-y": "php-unit-integrator:run-test-all-suites",
         "cmd-alt-g": "php-unit-integrator:run-test-all-files",
-        "cmd-alt-v": "php-unit-integrator:run-test-method"
+        "cmd-alt-v": "php-unit-integrator:run-test-method",
+
+        "cmd-alt-k": "php-unit-integrator:goto-test-class",
+        "cmd-alt-m": "php-unit-integrator:goto-test-method"
     },
     ".platform-win32 atom-text-editor[data-grammar='text html php']": {
         "ctrl-alt-t": "php-unit-integrator:run-test-suite",
@@ -27,7 +30,10 @@
 
         "ctrl-alt-y": "php-unit-integrator:run-test-all-suites",
         "ctrl-alt-g": "php-unit-integrator:run-test-all-files",
-        "ctrl-alt-v": "php-unit-integrator:run-test-method"
+        "ctrl-alt-v": "php-unit-integrator:run-test-method",
+
+        "ctrl-alt-k": "php-unit-integrator:goto-test-class",
+        "ctrl-alt-m": "php-unit-integrator:goto-test-method"
     },
     ".platform-linux atom-text-editor[data-grammar='text html php']": {
         "ctrl-alt-t": "php-unit-integrator:run-test-suite",
@@ -36,10 +42,9 @@
 
         "ctrl-alt-y": "php-unit-integrator:run-test-all-suites",
         "ctrl-alt-g": "php-unit-integrator:run-test-all-files",
-        "ctrl-alt-v": "php-unit-integrator:run-test-method"
+        "ctrl-alt-v": "php-unit-integrator:run-test-method",
+
+        "ctrl-alt-k": "php-unit-integrator:goto-test-class",
+        "ctrl-alt-m": "php-unit-integrator:goto-test-method"
     },
-    "atom-text-editor[data-grammar='text html php']": {
-        "ctrl-shift-c": "php-unit-integrator:goto-test-class",
-        "ctrl-shift-v": "php-unit-integrator:goto-test-method"
-    }
 }
