@@ -46,5 +46,5 @@
 
         "ctrl-alt-k": "php-unit-integrator:goto-test-class",
         "ctrl-alt-m": "php-unit-integrator:goto-test-method"
-    },
+    }
 }
