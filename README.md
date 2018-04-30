@@ -65,6 +65,13 @@ instance.
 The first adapter found, searching from the source towards the root, will be used.
 This allows for a per-directory configuration.
 
+###### Code Coverage
+When the XDebug module is loaded via your `php.ini` configuration, a 'Code Coverage'
+toggle button will become available in the packages main view. For those of you whom
+don't want XDebug enabled system wide, The full path to the XDebug extension can
+be configured within the package settings. This will display the 'Code Coverage'
+toggle and only load the extension when the toggle is enabled.
+
 ###### Background
 After switching to atom, I missed the phpunit integration within the netbeans
 editor. This is an attempt at creating a similar environment.
