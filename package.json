@@ -38,6 +38,27 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-react": "^7.7.0"
   },
+  "sharedConfigSchema": {
+      "php": {
+          "type": "object",
+          "properties": {
+              "phpCommand": {
+                "title": "PHP command",
+                "description": "The path to your PHP binary (e.g. /usr/bin/php, php, ...).",
+                "type": "string",
+                "default": "php",
+                "order": 1
+              },
+              "phpExtensions": {
+                "title": "Path to XDebug extension",
+                "description": "The full path to xdebug.so or xdebug.dll will enable it to be toggled.",
+                "type": "string",
+                "default": "",
+                "order": 2
+              }
+          }
+      }
+  },
   "configSchema": {
     "useIntegratorBase": {
       "title": "Use PHP Integrator Base Settings",
