@@ -1,3 +1,4 @@
 node_modules/
-tests/
+spec/
+npm-debug.log
 CHANGELOG.md

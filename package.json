@@ -25,6 +25,7 @@
     }
   },
   "dependencies": {
+    "atom-blitz-settings": "^0.0.3",
     "atom-package-deps": "~4.5.0",
     "colletch": "^0.0.26",
     "etch": "~0.13.0",
